@@ -4,6 +4,8 @@
 
 本站只提供资源网站的网址和说明，真实内容由贡献者通过 Pull Request 补充和维护。
 
+项目仓库：[Matrix-2001/resource-share](https://github.com/Matrix-2001/resource-share)
+
 ## 资源分类
 
 - [电子书资源](./resources/ebooks/)：电子书搜索、下载和阅读相关网站。
