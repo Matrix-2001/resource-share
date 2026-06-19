@@ -1,5 +1,5 @@
 ---
-title: zlibrary
+title: Z-Library
 url: https://zh.z-lib.fm
 category: ebooks
 tags: [电子书, 搜索]
