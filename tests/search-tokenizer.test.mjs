@@ -18,3 +18,12 @@ test('英文搜索词兼容大小写和连接符差异', () => {
   assert.equal(processSearchTerm('Z-Library'), 'zlibrary')
   assert.equal(processSearchTerm('zlibrary'), 'zlibrary')
 })
+
+test('搜索分词函数可在 VitePress 序列化后独立运行', () => {
+  const browserTokenize = new Function(`return ${tokenizeSearchText.toString()}`)()
+  const browserProcessTerm = new Function(`return ${processSearchTerm.toString()}`)()
+
+  assert.ok(browserTokenize('电子书下载').includes('下载'))
+  assert.ok(browserTokenize('Z-Library').includes('zlibrary'))
+  assert.equal(browserProcessTerm('Z-Library'), 'zlibrary')
+})
