@@ -8,13 +8,13 @@
 
 资源数量：1
 
-## [示例电子书资源站](./ebooks/example.md)
+### [zlibrary](./ebooks/z-library.md)
 
-- 地址：https://example.com/ebooks
-- 状态：未知
+- 地址：https://zh.z-lib.fm
+- 状态：可用
 - 标签：电子书、搜索
 
-这是一个电子书资源示例条目。贡献者可以复制本文件，修改网址、标签和说明后提交 Pull Request。
+全球最大电子书网站，资源挺多。
 
 ## BT 种子资源
 
@@ -22,24 +22,32 @@ BT 种子搜索、索引和相关资源站。
 
 资源数量：1
 
-## [示例 BT 种子资源站](./torrents/example.md)
+### [1](./torrents/fit-girl.md)
 
-- 地址：https://example.com/torrents
-- 状态：未知
-- 标签：BT、种子
+- 地址：1
+- 状态：可用
+- 标签：种子、搜索、下载
 
-这是一个 BT 种子资源示例条目。请在真实投稿中说明网站适合查找的资源类型和使用注意事项。
+1。
 
 ## 游戏资源
 
 游戏信息、下载和相关工具资源。
 
-资源数量：1
+资源数量：2
 
-## [示例游戏资源站](./games/example.md)
+### [fit-girl](./games/fit-girl.md)
 
-- 地址：https://example.com/games
-- 状态：未知
-- 标签：游戏、工具
+- 地址：https://fitgirl-repacks.site/
+- 状态：可用
+- 标签：游戏、搜索
 
-这是一个游戏资源示例条目。请在真实投稿中说明资源类型、平台范围和注意事项。
+可信度很高，资源无病毒，推荐使用种子下载方式。注意其他下载方式可能重定向到恶意网站。不推荐虚拟化破解（HYPERVISOR）的游戏。
+
+### [privateers-club](./games/privateers-club.md)
+
+- 地址：https://github.com/privateersclub/wiki
+- 状态：可用
+- 标签：游戏、搜索
+
+github上找到的，号称互联网上最全面的游戏盗版维基。

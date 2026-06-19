@@ -17,7 +17,7 @@
 - `tests/`：资源索引生成脚本测试。
 - `.github/workflows/deploy.yml`：GitHub Pages 自动构建与发布流程。
 
-每条资源使用一个独立 Markdown 文件维护，例如 `docs/resources/ebooks/example.md`。各分类目录下的 `index.md` 和 `docs/resources/index.md` 由生成脚本维护，不要手动长期编辑这些索引页。
+每条资源使用一个独立 Markdown 文件维护，例如 `docs/resources/ebooks/z-library.md`。各分类目录下的 `index.md` 和 `docs/resources/index.md` 由生成脚本维护，不要手动长期编辑这些索引页。
 
 不要提交 `node_modules/`、`docs/.vitepress/cache/`、`docs/.vitepress/dist/`、`docs/.vitepress/.temp/`、`.superpowers/` 或 `.worktrees/`。
 

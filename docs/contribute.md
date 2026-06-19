@@ -8,7 +8,7 @@
    - `docs/resources/ebooks/`：电子书资源。
    - `docs/resources/torrents/`：BT 种子资源。
    - `docs/resources/games/`：游戏资源。
-2. 复制同目录下的 `example.md`，改成小写 kebab-case 文件名，例如 `my-resource.md`。
+2. 参考同目录下已有资源文件，新建一个小写 kebab-case 文件名，例如 `my-resource.md`。
 3. 修改 frontmatter 中的 `title`、`url`、`category`、`tags` 和 `status`。
 4. 在正文中填写资源说明、适合查找的内容和注意事项。
 5. 运行 `npm run generate` 和 `npm run docs:build` 检查是否能正常构建。

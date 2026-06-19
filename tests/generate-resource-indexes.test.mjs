@@ -38,7 +38,11 @@ status: active
 
     assert.match(overview, /# 资源总览/)
     assert.match(overview, /电子书资源/)
+    assert.match(overview, /## 电子书资源/)
+    assert.match(overview, /### \[示例电子书站\]\(\.\/ebooks\/example\.md\)/)
+    assert.doesNotMatch(overview, /^## \[示例电子书站\]\(\.\/ebooks\/example\.md\)/m)
     assert.match(ebooks, /# 电子书资源/)
+    assert.match(ebooks, /## \[示例电子书站\]\(\.\/example\.md\)/)
     assert.match(ebooks, /示例电子书站/)
     assert.match(ebooks, /https:\/\/example.com/)
   } finally {

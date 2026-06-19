@@ -6,10 +6,10 @@
 
 资源数量：1
 
-## [示例电子书资源站](./example.md)
+## [zlibrary](./z-library.md)
 
-- 地址：https://example.com/ebooks
-- 状态：未知
+- 地址：https://zh.z-lib.fm
+- 状态：可用
 - 标签：电子书、搜索
 
-这是一个电子书资源示例条目。贡献者可以复制本文件，修改网址、标签和说明后提交 Pull Request。
+全球最大电子书网站，资源挺多。

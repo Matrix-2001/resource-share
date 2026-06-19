@@ -120,9 +120,10 @@ function renderResourceList(resources, currentCategory) {
 
   return resources.map((resource) => {
     const relativeLink = currentCategory ? `./${resource.fileName}` : `./${resource.category}/${resource.fileName}`
+    const headingLevel = currentCategory ? '##' : '###'
     const status = STATUS_LABELS[resource.status] || resource.status
     return [
-      `## [${resource.title}](${relativeLink})`,
+      `${headingLevel} [${resource.title}](${relativeLink})`,
       '',
       `- 地址：${resource.url}`,
       `- 状态：${status}`,
