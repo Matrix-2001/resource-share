@@ -26,9 +26,14 @@ url: https://example.com
 category: ebooks
 tags: [电子书, 搜索]
 status: active
+summary: 示例电子书站用于检索电子书资源。
 ---
 
 这里是电子书资源站说明。
+
+## 详情
+
+这里是详情页才需要展示的长说明。
 `)
 
     await generateResourceIndexes({ rootDir: root })
@@ -45,6 +50,8 @@ status: active
     assert.match(ebooks, /## \[示例电子书站\]\(\.\/example\.md\)/)
     assert.match(ebooks, /示例电子书站/)
     assert.match(ebooks, /https:\/\/example.com/)
+    assert.match(ebooks, /示例电子书站用于检索电子书资源。/)
+    assert.doesNotMatch(ebooks, /这里是详情页才需要展示的长说明。/)
   } finally {
     await rm(root, { recursive: true, force: true })
   }

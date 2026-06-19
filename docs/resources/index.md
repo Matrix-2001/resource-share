@@ -14,27 +14,35 @@
 - 状态：可用
 - 标签：电子书、搜索
 
-全球最大电子书网站，资源挺多。
+Z-Library 是以电子书和学术资料检索为主的数字图书馆入口，资源量大，但访问域名和可用性可能变化。
 
 ## BT 种子资源
 
 BT 种子搜索、索引和相关资源站。
 
-资源数量：1
+资源数量：2
 
-### [1](./torrents/fit-girl.md)
+### [1337x](./torrents/1337x.md)
 
-- 地址：1
+- 地址：https://1337x.to/
 - 状态：可用
 - 标签：种子、搜索、下载
 
-1。
+1337x 是知名 BitTorrent 索引站，提供 torrent 和 magnet 链接检索入口。
+
+### [ThePirateBay](./torrents/the-pirate-bay.md)
+
+- 地址：https://thepiratebay.org/
+- 状态：可用
+- 标签：种子、搜索、下载
+
+The Pirate Bay 是老牌 torrent/magnet 索引站，知名度高，也长期伴随版权争议。
 
 ## 游戏资源
 
 游戏信息、下载和相关工具资源。
 
-资源数量：2
+资源数量：3
 
 ### [fit-girl](./games/fit-girl.md)
 
@@ -42,7 +50,15 @@ BT 种子搜索、索引和相关资源站。
 - 状态：可用
 - 标签：游戏、搜索
 
-可信度很高，资源无病毒，推荐使用种子下载方式。注意其他下载方式可能重定向到恶意网站。不推荐虚拟化破解（HYPERVISOR）的游戏。
+FitGirl Repacks 以体积较小的游戏 repack 闻名，常用于查找压缩后的游戏发布信息。
+
+### [老男人游戏网](./games/oldman-emu.md)
+
+- 地址：https://www.oldmanemu.org
+- 状态：可用
+- 标签：游戏、搜索
+
+老男人游戏网偏向主机、掌机和模拟器相关游戏资源整理，分类覆盖多种经典游戏平台。
 
 ### [privateers-club](./games/privateers-club.md)
 
@@ -50,4 +66,4 @@ BT 种子搜索、索引和相关资源站。
 - 状态：可用
 - 标签：游戏、搜索
 
-github上找到的，号称互联网上最全面的游戏盗版维基。
+PrivateersClub Wiki 是托管在 GitHub 上的游戏相关资料 Wiki，适合查阅游戏资源获取和工具指南。

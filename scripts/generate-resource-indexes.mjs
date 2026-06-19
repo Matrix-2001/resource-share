@@ -97,7 +97,7 @@ async function readCategoryResources(rootDir, category) {
       ...data,
       status: data.status || 'unknown',
       tags: Array.isArray(data.tags) ? data.tags : [],
-      summary: firstParagraph(content),
+      summary: data.summary || firstParagraph(content),
       fileName,
       directoryCategory: category.key,
       filePath: relative(rootDir, filePath).replaceAll('\\', '/')
