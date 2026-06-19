@@ -11,7 +11,7 @@ const execFileAsync = promisify(execFile)
 
 async function createProject() {
   const root = await mkdtemp(join(tmpdir(), 'resource-share-test-'))
-  for (const category of ['ebooks', 'torrents', 'games']) {
+  for (const category of ['ebooks', 'torrents', 'games', 'creator-archives']) {
     await mkdir(join(root, 'docs', 'resources', category), { recursive: true })
   }
   return root
@@ -140,6 +140,35 @@ test('支持 CRLF 换行的资源文件', async () => {
     assert.match(ebooks, /CRLF 电子书站/)
     assert.match(ebooks, /这里是 CRLF 换行的资源说明。/)
     assert.doesNotMatch(ebooks, /title: CRLF 电子书站/)
+  } finally {
+    await rm(root, { recursive: true, force: true })
+  }
+})
+
+test('生成创作者内容归档分类索引', async () => {
+  const root = await createProject()
+  try {
+    await writeFile(join(root, 'docs', 'resources', 'creator-archives', 'kemono.md'), `---
+title: Kemono
+url: https://kemono.cr/
+category: creator-archives
+tags: [创作者, 归档]
+status: active
+summary: Kemono 是面向创作者订阅平台内容的归档与索引站。
+---
+
+详情说明。
+`)
+
+    await generateResourceIndexes({ rootDir: root })
+
+    const overview = await readFile(join(root, 'docs', 'resources', 'index.md'), 'utf8')
+    const creatorArchives = await readFile(join(root, 'docs', 'resources', 'creator-archives', 'index.md'), 'utf8')
+
+    assert.match(overview, /## 创作者内容归档/)
+    assert.match(overview, /### \[Kemono\]\(\.\/creator-archives\/kemono\.md\)/)
+    assert.match(creatorArchives, /# 创作者内容归档/)
+    assert.match(creatorArchives, /## \[Kemono\]\(\.\/kemono\.md\)/)
   } finally {
     await rm(root, { recursive: true, force: true })
   }

@@ -7,7 +7,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const CATEGORIES = [
   { key: 'ebooks', title: '电子书资源', description: '电子书搜索、下载和阅读相关网站。' },
   { key: 'torrents', title: 'BT 种子资源', description: 'BT 种子搜索、索引和相关资源站。' },
-  { key: 'games', title: '游戏资源', description: '游戏信息、下载和相关工具资源。' }
+  { key: 'games', title: '游戏资源', description: '游戏信息、下载和相关工具资源。' },
+  { key: 'creator-archives', title: '创作者内容归档', description: '创作者订阅平台内容归档、索引和资料入口。' }
 ]
 
 const REQUIRED_FIELDS = ['title', 'url', 'category']
