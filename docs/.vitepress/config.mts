@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { processSearchTerm, tokenizeSearchText } from './search-tokenizer.mjs'
 
 export default defineConfig({
   title: '资源共享索引',
@@ -65,6 +66,12 @@ export default defineConfig({
     search: {
       provider: 'local',
       options: {
+        miniSearch: {
+          options: {
+            tokenize: tokenizeSearchText,
+            processTerm: processSearchTerm
+          }
+        },
         translations: {
           button: {
             buttonText: '搜索资源',

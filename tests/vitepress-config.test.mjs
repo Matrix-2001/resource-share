@@ -6,8 +6,12 @@ import { join } from 'node:path'
 test('启用 VitePress 本地搜索并使用中文文案', async () => {
   const config = await readFile(join(process.cwd(), 'docs', '.vitepress', 'config.mts'), 'utf8')
 
+  assert.match(config, /import\s+{\s*processSearchTerm,\s*tokenizeSearchText\s*}\s+from\s+'\.\/search-tokenizer\.mjs'/)
   assert.match(config, /search:\s*{/)
   assert.match(config, /provider:\s*'local'/)
+  assert.match(config, /miniSearch:\s*{/)
+  assert.match(config, /tokenize:\s*tokenizeSearchText/)
+  assert.match(config, /processTerm:\s*processSearchTerm/)
   assert.match(config, /buttonText:\s*'搜索资源'/)
   assert.match(config, /buttonAriaLabel:\s*'搜索资源'/)
   assert.match(config, /noResultsText:\s*'没有找到相关资源'/)
