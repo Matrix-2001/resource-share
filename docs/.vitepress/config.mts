@@ -27,7 +27,8 @@ export default defineConfig({
           { text: '电子书资源', link: '/resources/ebooks/' },
           { text: 'BT 种子资源', link: '/resources/torrents/' },
           { text: '游戏资源', link: '/resources/games/' },
-          { text: '创作者内容归档', link: '/resources/creator-archives/' }
+          { text: '创作者内容归档', link: '/resources/creator-archives/' },
+          { text: '网络工具', link: '/resources/network-tools/' }
         ]
       }
     ],

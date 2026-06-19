@@ -11,7 +11,7 @@ const execFileAsync = promisify(execFile)
 
 async function createProject() {
   const root = await mkdtemp(join(tmpdir(), 'resource-share-test-'))
-  for (const category of ['ebooks', 'torrents', 'games', 'creator-archives']) {
+  for (const category of ['ebooks', 'torrents', 'games', 'creator-archives', 'network-tools']) {
     await mkdir(join(root, 'docs', 'resources', category), { recursive: true })
   }
   return root
@@ -169,6 +169,35 @@ summary: Kemono 是面向创作者订阅平台内容的归档与索引站。
     assert.match(overview, /### \[Kemono\]\(\.\/creator-archives\/kemono\.md\)/)
     assert.match(creatorArchives, /# 创作者内容归档/)
     assert.match(creatorArchives, /## \[Kemono\]\(\.\/kemono\.md\)/)
+  } finally {
+    await rm(root, { recursive: true, force: true })
+  }
+})
+
+test('生成网络工具分类索引', async () => {
+  const root = await createProject()
+  try {
+    await writeFile(join(root, 'docs', 'resources', 'network-tools', 'mojie.md'), `---
+title: Mojie
+url: https://mojie.me/
+category: network-tools
+tags: [网络工具, 代理服务]
+status: active
+summary: Mojie 是网络访问工具相关站点，适合记录代理服务入口和使用说明。
+---
+
+详情说明。
+`)
+
+    await generateResourceIndexes({ rootDir: root })
+
+    const overview = await readFile(join(root, 'docs', 'resources', 'index.md'), 'utf8')
+    const networkTools = await readFile(join(root, 'docs', 'resources', 'network-tools', 'index.md'), 'utf8')
+
+    assert.match(overview, /## 网络工具/)
+    assert.match(overview, /### \[Mojie\]\(\.\/network-tools\/mojie\.md\)/)
+    assert.match(networkTools, /# 网络工具/)
+    assert.match(networkTools, /## \[Mojie\]\(\.\/mojie\.md\)/)
   } finally {
     await rm(root, { recursive: true, force: true })
   }

@@ -9,6 +9,7 @@
    - `docs/resources/torrents/`：BT 种子资源。
    - `docs/resources/games/`：游戏资源。
    - `docs/resources/creator-archives/`：创作者内容归档。
+   - `docs/resources/network-tools/`：网络工具。
 2. 参考同目录下已有资源文件，新建一个小写 kebab-case 文件名，例如 `my-resource.md`。
 3. 修改 frontmatter 中的 `title`、`url`、`category`、`tags` 和 `status`。
 4. 在正文中填写资源说明、适合查找的内容和注意事项。
@@ -29,7 +30,7 @@ status: active
 
 - `title`：资源名称，必填。
 - `url`：资源网址，必填。
-- `category`：资源分类，必填，只能是 `ebooks`、`torrents`、`games` 或 `creator-archives`。
+- `category`：资源分类，必填，只能是 `ebooks`、`torrents`、`games`、`creator-archives` 或 `network-tools`。
 - `tags`：资源标签，可选。
 - `status`：资源状态，可选，支持 `active`、`unknown`、`deprecated`。
 
