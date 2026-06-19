@@ -4,6 +4,7 @@ export default defineConfig({
   title: '资源共享索引',
   description: '资源共享索引',
   lang: 'zh-CN',
+  base: '/resource-share/',
   cleanUrls: true,
   themeConfig: {
     nav: [
