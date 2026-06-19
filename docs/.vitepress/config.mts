@@ -28,7 +28,8 @@ export default defineConfig({
           { text: 'BT 种子资源', link: '/resources/torrents/' },
           { text: '游戏资源', link: '/resources/games/' },
           { text: '创作者内容归档', link: '/resources/creator-archives/' },
-          { text: '网络工具', link: '/resources/network-tools/' }
+          { text: '网络工具', link: '/resources/network-tools/' },
+          { text: '❤大家想看的东西❤', link: '/resources/❤大家想看的东西❤/' }
         ]
       }
     ],

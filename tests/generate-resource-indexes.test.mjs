@@ -11,7 +11,7 @@ const execFileAsync = promisify(execFile)
 
 async function createProject() {
   const root = await mkdtemp(join(tmpdir(), 'resource-share-test-'))
-  for (const category of ['ebooks', 'torrents', 'games', 'creator-archives', 'network-tools']) {
+  for (const category of ['ebooks', 'torrents', 'games', 'creator-archives', 'network-tools', '❤大家想看的东西❤']) {
     await mkdir(join(root, 'docs', 'resources', category), { recursive: true })
   }
   return root
@@ -198,6 +198,35 @@ summary: Mojie 是网络访问工具相关站点，适合记录代理服务入�
     assert.match(overview, /### \[Mojie\]\(\.\/network-tools\/mojie\.md\)/)
     assert.match(networkTools, /# 网络工具/)
     assert.match(networkTools, /## \[Mojie\]\(\.\/mojie\.md\)/)
+  } finally {
+    await rm(root, { recursive: true, force: true })
+  }
+})
+
+test('生成特殊命名的成人向分类索引', async () => {
+  const root = await createProject()
+  try {
+    await writeFile(join(root, 'docs', 'resources', '❤大家想看的东西❤', 'example-adult.md'), `---
+title: 示例成人向资源
+url: https://example.com/
+category: ❤大家想看的东西❤
+tags: [成人向, 索引]
+status: active
+summary: 示例成人向资源用于验证特殊中文分类目录。
+---
+
+详情说明。
+`)
+
+    await generateResourceIndexes({ rootDir: root })
+
+    const overview = await readFile(join(root, 'docs', 'resources', 'index.md'), 'utf8')
+    const adult = await readFile(join(root, 'docs', 'resources', '❤大家想看的东西❤', 'index.md'), 'utf8')
+
+    assert.match(overview, /## ❤大家想看的东西❤/)
+    assert.match(overview, /### \[示例成人向资源\]\(\.\/❤大家想看的东西❤\/example-adult\.md\)/)
+    assert.match(adult, /# ❤大家想看的东西❤/)
+    assert.match(adult, /## \[示例成人向资源\]\(\.\/example-adult\.md\)/)
   } finally {
     await rm(root, { recursive: true, force: true })
   }

@@ -15,6 +15,7 @@
 - `docs/resources/games/`：游戏资源。
 - `docs/resources/creator-archives/`：创作者内容归档。
 - `docs/resources/network-tools/`：网络工具。
+- `docs/resources/❤大家想看的东西❤/`：成人向资源。
 - `scripts/generate-resource-indexes.mjs`：扫描资源 Markdown 并生成索引页。
 - `tests/`：资源索引生成脚本测试。
 - `.github/workflows/deploy.yml`：GitHub Pages 自动构建与发布流程。
@@ -62,7 +63,7 @@ status: active
 
 - `title`：资源名称。
 - `url`：资源网址。
-- `category`：资源分类，只能是 `ebooks`、`torrents`、`games`、`creator-archives` 或 `network-tools`。
+- `category`：资源分类，只能是 `ebooks`、`torrents`、`games`、`creator-archives`、`network-tools` 或 `❤大家想看的东西❤`。
 
 可选字段：
 

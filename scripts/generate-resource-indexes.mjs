@@ -9,7 +9,8 @@ const CATEGORIES = [
   { key: 'torrents', title: 'BT 种子资源', description: 'BT 种子搜索、索引和相关资源站。' },
   { key: 'games', title: '游戏资源', description: '游戏信息、下载和相关工具资源。' },
   { key: 'creator-archives', title: '创作者内容归档', description: '创作者订阅平台内容归档、索引和资料入口。' },
-  { key: 'network-tools', title: '网络工具', description: '网络访问、代理服务和相关工具入口。' }
+  { key: 'network-tools', title: '网络工具', description: '网络访问、代理服务和相关工具入口。' },
+  { key: '❤大家想看的东西❤', title: '❤大家想看的东西❤', description: '成人向内容索引、导航和相关资源入口。' }
 ]
 
 const REQUIRED_FIELDS = ['title', 'url', 'category']
