@@ -6,6 +6,7 @@ export default defineConfig({
   lang: 'zh-CN',
   base: '/resource-share/',
   cleanUrls: true,
+  srcExclude: ['superpowers/**/*.md'],
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
