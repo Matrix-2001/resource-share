@@ -19,3 +19,13 @@ test('排除 superpowers 过程文档避免被搜索和访问', async () => {
   assert.match(config, /srcExclude:\s*\[/)
   assert.match(config, /superpowers\/\*\*\//)
 })
+
+test('开发服务拦截 superpowers 过程文档路由', async () => {
+  const config = await readFile(join(process.cwd(), 'docs', '.vitepress', 'config.mts'), 'utf8')
+
+  assert.match(config, /name:\s*'block-superpowers-pages'/)
+  assert.match(config, /configureServer\(server\)/)
+  assert.match(config, /decodeURI\(req\.url/)
+  assert.match(config, /normalizedPath\.startsWith\('\/resource-share\/superpowers\/'\)/)
+  assert.match(config, /res\.statusCode\s*=\s*404/)
+})

@@ -7,6 +7,33 @@ export default defineConfig({
   base: '/resource-share/',
   cleanUrls: true,
   srcExclude: ['superpowers/**/*.md'],
+  vite: {
+    plugins: [
+      {
+        name: 'block-superpowers-pages',
+        configureServer(server) {
+          server.middlewares.use((req, res, next) => {
+            if (!req.url) {
+              next()
+              return
+            }
+
+            const normalizedPath = decodeURI(req.url).replace(/[?#].*$/, '')
+            if (
+              normalizedPath.startsWith('/resource-share/superpowers/') ||
+              normalizedPath.startsWith('/superpowers/')
+            ) {
+              res.statusCode = 404
+              res.end('Not Found')
+              return
+            }
+
+            next()
+          })
+        }
+      }
+    ]
+  },
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
