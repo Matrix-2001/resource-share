@@ -33,6 +33,28 @@ export default defineConfig({
         ]
       }
     ],
-    socialLinks: []
+    socialLinks: [],
+    search: {
+      provider: 'local',
+      options: {
+        translations: {
+          button: {
+            buttonText: '搜索资源',
+            buttonAriaLabel: '搜索资源'
+          },
+          modal: {
+            noResultsText: '没有找到相关资源',
+            resetButtonTitle: '清除搜索',
+            backButtonTitle: '关闭搜索',
+            displayDetails: '显示详情',
+            footer: {
+              selectText: '选择',
+              navigateText: '切换',
+              closeText: '关闭'
+            }
+          }
+        }
+      }
+    }
   }
 })
