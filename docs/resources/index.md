@@ -8,7 +8,7 @@
 
 资源数量：1
 
-### [zlibrary](./ebooks/z-library.md)
+### [Z-Library](./ebooks/z-library.md)
 
 - 地址：https://zh.z-lib.fm
 - 状态：可用

@@ -6,7 +6,7 @@
 
 资源数量：1
 
-## [zlibrary](./z-library.md)
+## [Z-Library](./z-library.md)
 
 - 地址：https://zh.z-lib.fm
 - 状态：可用
