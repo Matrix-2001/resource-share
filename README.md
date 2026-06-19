@@ -1,6 +1,6 @@
 # resource-share
 
-QQ 群资源共享站，使用 VitePress 构建，用于展示电子书资源、BT 种子资源和游戏资源的网址与说明。
+资源共享索引，使用 VitePress 构建，用于展示电子书资源、BT 种子资源和游戏资源的网址与说明。
 
 ## 本地开发
 
@@ -23,4 +23,4 @@ npm run docs:build
 
 ## 投稿
 
-群友可以阅读 `docs/contribute.md`，新增资源 Markdown 文件后提交 Pull Request。
+贡献者可以阅读 `docs/contribute.md`，新增资源 Markdown 文件后提交 Pull Request。

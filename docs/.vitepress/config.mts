@@ -1,8 +1,8 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: '资源共享站',
-  description: 'QQ 群资源共享索引',
+  title: '资源共享索引',
+  description: '资源共享索引',
   lang: 'zh-CN',
   cleanUrls: true,
   themeConfig: {
@@ -13,7 +13,7 @@ export default defineConfig({
     ],
     sidebar: [
       {
-        text: '资源共享站',
+        text: '资源共享索引',
         items: [
           { text: '首页', link: '/' },
           { text: '资源总览', link: '/resources/' },

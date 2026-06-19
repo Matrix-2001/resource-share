@@ -151,7 +151,7 @@ function renderOverview(groupedResources) {
   return [
     '# 资源总览',
     '',
-    '这里自动汇总群友提交的资源。请不要手动编辑本页，运行 `npm run generate` 会重新生成内容。',
+    '这里自动汇总贡献者提交的资源。请不要手动编辑本页，运行 `npm run generate` 会重新生成内容。',
     '',
     ...sections
   ].join('\n')

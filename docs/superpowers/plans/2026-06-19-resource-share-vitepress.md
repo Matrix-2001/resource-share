@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** 构建一个面向 QQ 群 PR 投稿的 VitePress 资源共享网站框架，并自动发布到 GitHub Pages。
+**Goal:** 构建一个面向贡献者 PR 投稿的 VitePress 资源共享索引框架，并自动发布到 GitHub Pages。
 
 **Architecture:** 站点源码放在 `docs/`，资源详情以独立 Markdown 文件存放在分类目录中。构建前由 `scripts/generate-resource-indexes.mjs` 扫描资源 frontmatter，校验字段并生成总览页和分类索引页，然后 VitePress 构建静态站点。
 
@@ -19,7 +19,7 @@
 - Create: `scripts/generate-resource-indexes.mjs`，扫描资源文件、校验 frontmatter、生成索引。
 - Create: `tests/generate-resource-indexes.test.mjs`，用临时目录验证生成脚本。
 - Create: `docs/index.md`，网站首页。
-- Create: `docs/contribute.md`，群友投稿说明。
+- Create: `docs/contribute.md`，贡献者投稿说明。
 - Create: `docs/resources/ebooks/example.md`，电子书示例资源。
 - Create: `docs/resources/torrents/example.md`，BT 种子示例资源。
 - Create: `docs/resources/games/example.md`，游戏示例资源。
@@ -82,7 +82,7 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   title: '资源共享站',
-  description: 'QQ 群资源共享索引',
+  description: '资源共享索引',
   lang: 'zh-CN',
   cleanUrls: true,
   themeConfig: {
@@ -164,9 +164,9 @@ export default defineConfig({
 ```md
 # 资源共享站
 
-这是 QQ 群使用的资源共享索引，用于整理电子书资源、BT 种子资源和游戏资源。
+这是一个用于整理电子书资源、BT 种子资源和游戏资源的共享索引。
 
-本站只提供资源网站的网址和说明，真实内容由群友通过 Pull Request 补充和维护。
+本站只提供资源网站的网址和说明，真实内容由贡献者通过 Pull Request 补充和维护。
 
 ## 资源分类
 
@@ -453,7 +453,7 @@ function renderOverview(groupedResources) {
   return [
     '# 资源总览',
     '',
-    '这里自动汇总群友提交的资源。请不要手动编辑本页，运行 `npm run generate` 会重新生成内容。',
+    '这里自动汇总贡献者提交的资源。请不要手动编辑本页，运行 `npm run generate` 会重新生成内容。',
     '',
     ...sections
   ].join('\n')
@@ -541,7 +541,7 @@ git commit -m "添加资源索引生成脚本"
 ```md
 # 投稿说明
 
-欢迎群友通过 Pull Request 补充资源。
+欢迎通过 Pull Request 补充资源。
 
 ## 新增资源步骤
 
@@ -595,7 +595,7 @@ tags: [电子书, 搜索]
 status: unknown
 ---
 
-这是一个电子书资源示例条目。群友可以复制本文件，修改网址、标签和说明后提交 Pull Request。
+这是一个电子书资源示例条目。贡献者可以复制本文件，修改网址、标签和说明后提交 Pull Request。
 ```
 
 - [ ] **Step 3: 创建 BT 种子示例资源**
@@ -743,7 +743,7 @@ jobs:
 ````md
 # resource-share
 
-QQ 群资源共享站，使用 VitePress 构建，用于展示电子书资源、BT 种子资源和游戏资源的网址与说明。
+资源共享索引，使用 VitePress 构建，用于展示电子书资源、BT 种子资源和游戏资源的网址与说明。
 
 ## 本地开发
 
@@ -766,7 +766,7 @@ npm run docs:build
 
 ## 投稿
 
-群友可以阅读 `docs/contribute.md`，新增资源 Markdown 文件后提交 Pull Request。
+贡献者可以阅读 `docs/contribute.md`，新增资源 Markdown 文件后提交 Pull Request。
 ````
 
 - [ ] **Step 3: 验证 YAML 和 README 已存在**

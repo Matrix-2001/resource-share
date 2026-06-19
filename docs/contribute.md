@@ -1,6 +1,6 @@
 # 投稿说明
 
-欢迎群友通过 Pull Request 补充资源。
+欢迎通过 Pull Request 补充资源。
 
 ## 新增资源步骤
 
