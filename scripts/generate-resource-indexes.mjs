@@ -189,8 +189,8 @@ export async function generateResourceIndexes({ rootDir = join(__dirname, '..') 
   )
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
-  generateResourceIndexes().catch((error) => {
+if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
+  generateResourceIndexes({ rootDir: process.cwd() }).catch((error) => {
     console.error(error.message)
     process.exitCode = 1
   })

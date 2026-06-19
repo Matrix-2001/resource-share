@@ -3,7 +3,11 @@ import assert from 'node:assert/strict'
 import { mkdtemp, mkdir, readFile, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
+import { execFile } from 'node:child_process'
+import { promisify } from 'node:util'
 import { generateResourceIndexes } from '../scripts/generate-resource-indexes.mjs'
+
+const execFileAsync = promisify(execFile)
 
 async function createProject() {
   const root = await mkdtemp(join(tmpdir(), 'resource-share-test-'))
@@ -78,6 +82,29 @@ category: games
       () => generateResourceIndexes({ rootDir: root }),
       /分类必须与所在目录一致/
     )
+  } finally {
+    await rm(root, { recursive: true, force: true })
+  }
+})
+
+test('直接运行脚本时生成资源索引', async () => {
+  const root = await createProject()
+  try {
+    await writeFile(join(root, 'docs', 'resources', 'games', 'example.md'), `---
+title: 示例游戏站
+url: https://example.com/games
+category: games
+---
+
+这里是游戏资源站说明。
+`)
+
+    await execFileAsync(process.execPath, [join(process.cwd(), 'scripts', 'generate-resource-indexes.mjs')], {
+      cwd: root
+    })
+
+    const games = await readFile(join(root, 'docs', 'resources', 'games', 'index.md'), 'utf8')
+    assert.match(games, /示例游戏站/)
   } finally {
     await rm(root, { recursive: true, force: true })
   }
