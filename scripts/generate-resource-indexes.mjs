@@ -18,16 +18,17 @@ const STATUS_LABELS = {
 }
 
 function parseFrontmatter(content, filePath) {
-  if (!content.startsWith('---\n')) {
+  const normalized = content.replaceAll('\r\n', '\n')
+  if (!normalized.startsWith('---\n')) {
     throw new Error(`${filePath} 缺少 frontmatter`)
   }
 
-  const end = content.indexOf('\n---', 4)
+  const end = normalized.indexOf('\n---', 4)
   if (end === -1) {
     throw new Error(`${filePath} frontmatter 未正确结束`)
   }
 
-  const raw = content.slice(4, end).trim()
+  const raw = normalized.slice(4, end).trim()
   const data = {}
 
   for (const line of raw.split('\n')) {
@@ -73,7 +74,8 @@ function validateResource(resource) {
 }
 
 function firstParagraph(content) {
-  const body = content.replace(/^---\n[\s\S]*?\n---\n?/, '').trim()
+  const normalized = content.replaceAll('\r\n', '\n')
+  const body = normalized.replace(/^---\n[\s\S]*?\n---\n?/, '').trim()
   const paragraph = body.split(/\n\s*\n/).find((item) => item.trim())
   return paragraph ? paragraph.replace(/\n/g, ' ').trim() : '暂无说明。'
 }

@@ -109,3 +109,27 @@ category: games
     await rm(root, { recursive: true, force: true })
   }
 })
+
+test('支持 CRLF 换行的资源文件', async () => {
+  const root = await createProject()
+  try {
+    await writeFile(join(root, 'docs', 'resources', 'ebooks', 'crlf.md'), [
+      '---',
+      'title: CRLF 电子书站',
+      'url: https://example.com/crlf',
+      'category: ebooks',
+      '---',
+      '',
+      '这里是 CRLF 换行的资源说明。'
+    ].join('\r\n'))
+
+    await generateResourceIndexes({ rootDir: root })
+
+    const ebooks = await readFile(join(root, 'docs', 'resources', 'ebooks', 'index.md'), 'utf8')
+    assert.match(ebooks, /CRLF 电子书站/)
+    assert.match(ebooks, /这里是 CRLF 换行的资源说明。/)
+    assert.doesNotMatch(ebooks, /title: CRLF 电子书站/)
+  } finally {
+    await rm(root, { recursive: true, force: true })
+  }
+})
