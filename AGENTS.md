@@ -11,11 +11,11 @@
 - `docs/.vitepress/theme/`：主题入口和自定义样式。
 - `docs/resources/`：资源内容目录。
 - `docs/resources/ebooks/`：电子书资源。
-- `docs/resources/torrents/`：BT 种子资源。
+- `docs/resources/torrents/`：P2P 索引资源。
 - `docs/resources/games/`：游戏资源。
-- `docs/resources/creator-archives/`：创作者内容归档。
+- `docs/resources/creator-archives/`：创作者内容索引。
 - `docs/resources/network-tools/`：网络工具。
-- `docs/resources/❤大家想看的东西❤/`：成人向资源。
+- `docs/resources/❤大家想看的东西❤/`：特定内容资源。
 - `scripts/generate-resource-indexes.mjs`：扫描资源 Markdown 并生成索引页。
 - `tests/`：资源索引生成脚本测试。
 - `.github/workflows/deploy.yml`：GitHub Pages 自动构建与发布流程。

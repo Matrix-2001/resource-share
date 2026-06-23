@@ -1,4 +1,4 @@
-# Resource Share VitePress Implementation Plan
+﻿# Resource Share VitePress Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
@@ -21,11 +21,11 @@
 - Create: `docs/index.md`，网站首页。
 - Create: `docs/contribute.md`，贡献者投稿说明。
 - Create: `docs/resources/ebooks/example.md`，电子书示例资源。
-- Create: `docs/resources/torrents/example.md`，BT 种子示例资源。
+- Create: `docs/resources/torrents/example.md`，P2P 索引示例资源。
 - Create: `docs/resources/games/example.md`，游戏示例资源。
 - Generated: `docs/resources/index.md`，资源总览页。
 - Generated: `docs/resources/ebooks/index.md`，电子书分类索引。
-- Generated: `docs/resources/torrents/index.md`，BT 种子分类索引。
+- Generated: `docs/resources/torrents/index.md`，P2P 索引分类页。
 - Generated: `docs/resources/games/index.md`，游戏分类索引。
 - Create: `.github/workflows/deploy.yml`，GitHub Pages 构建与部署。
 - Modify: `README.md`，说明项目用途和常用命令。
@@ -104,7 +104,7 @@ export default defineConfig({
         text: '资源分类',
         items: [
           { text: '电子书资源', link: '/resources/ebooks/' },
-          { text: 'BT 种子资源', link: '/resources/torrents/' },
+          { text: 'P2P 索引资源', link: '/resources/torrents/' },
           { text: '游戏资源', link: '/resources/games/' }
         ]
       }
@@ -164,14 +164,14 @@ export default defineConfig({
 ```md
 # 资源共享站
 
-这是一个用于整理电子书资源、BT 种子资源和游戏资源的共享索引。
+这是一个用于整理电子书资源、P2P 索引资源和游戏资源的共享索引。
 
 本站只提供资源网站的网址和说明，真实内容由贡献者通过 Pull Request 补充和维护。
 
 ## 资源分类
 
 - [电子书资源](./resources/ebooks/)：电子书搜索、下载和阅读相关网站。
-- [BT 种子资源](./resources/torrents/)：BT 种子搜索、索引和相关资源站。
+- [P2P 索引资源](./resources/torrents/)：P2P 文件索引、目录和相关资源站。
 - [游戏资源](./resources/games/)：游戏信息、下载和相关工具资源。
 
 ## 参与维护
@@ -310,7 +310,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 
 const CATEGORIES = [
   { key: 'ebooks', title: '电子书资源', description: '电子书搜索、下载和阅读相关网站。' },
-  { key: 'torrents', title: 'BT 种子资源', description: 'BT 种子搜索、索引和相关资源站。' },
+  { key: 'torrents', title: 'P2P 索引资源', description: 'P2P 文件索引、目录和相关资源站。' },
   { key: 'games', title: '游戏资源', description: '游戏信息、下载和相关工具资源。' }
 ]
 
@@ -547,7 +547,7 @@ git commit -m "添加资源索引生成脚本"
 
 1. 选择资源分类目录：
    - `docs/resources/ebooks/`：电子书资源。
-   - `docs/resources/torrents/`：BT 种子资源。
+   - `docs/resources/torrents/`：P2P 索引资源。
    - `docs/resources/games/`：游戏资源。
 2. 复制同目录下的 `example.md`，改成小写 kebab-case 文件名，例如 `my-resource.md`。
 3. 修改 frontmatter 中的 `title`、`url`、`category`、`tags` 和 `status`。
@@ -598,20 +598,20 @@ status: unknown
 这是一个电子书资源示例条目。贡献者可以复制本文件，修改网址、标签和说明后提交 Pull Request。
 ```
 
-- [ ] **Step 3: 创建 BT 种子示例资源**
+- [ ] **Step 3: 创建 P2P 索引示例资源**
 
 在 `docs/resources/torrents/example.md` 写入：
 
 ```md
 ---
-title: 示例 BT 种子资源站
+title: 示例 P2P 索引资源站
 url: https://example.com/torrents
 category: torrents
-tags: [BT, 种子]
+tags: [P2P, 索引]
 status: unknown
 ---
 
-这是一个 BT 种子资源示例条目。请在真实投稿中说明网站适合查找的资源类型和使用注意事项。
+这是一个 P2P 索引资源示例条目。请在真实投稿中说明网站适合查找的资源类型和使用注意事项。
 ```
 
 - [ ] **Step 4: 创建游戏示例资源**
@@ -645,7 +645,7 @@ npm run generate
 运行：
 
 ```bash
-Select-String -Path docs/resources/index.md -Pattern '电子书资源|BT 种子资源|游戏资源'
+Select-String -Path docs/resources/index.md -Pattern '电子书资源|P2P 索引资源|游戏资源'
 Select-String -Path docs/resources/games/index.md -Pattern '示例游戏资源站'
 ```
 
@@ -743,7 +743,7 @@ jobs:
 ````md
 # resource-share
 
-资源共享索引，使用 VitePress 构建，用于展示电子书资源、BT 种子资源和游戏资源的网址与说明。
+资源共享索引，使用 VitePress 构建，用于展示电子书资源、P2P 索引资源和游戏资源的网址与说明。
 
 ## 本地开发
 

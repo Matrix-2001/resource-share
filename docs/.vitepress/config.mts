@@ -54,9 +54,9 @@ export default defineConfig({
         text: '资源分类',
         items: [
           { text: '电子书资源', link: '/resources/ebooks/' },
-          { text: 'BT 种子资源', link: '/resources/torrents/' },
+          { text: 'P2P 索引资源', link: '/resources/torrents/' },
           { text: '游戏资源', link: '/resources/games/' },
-          { text: '创作者内容归档', link: '/resources/creator-archives/' },
+          { text: '创作者内容索引', link: '/resources/creator-archives/' },
           { text: '网络工具', link: '/resources/network-tools/' },
           { text: '❤大家想看的东西❤', link: '/resources/❤大家想看的东西❤/' }
         ]

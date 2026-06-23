@@ -2,26 +2,26 @@
 title: ThePirateBay
 url: https://thepiratebay.org/
 category: torrents
-tags: [种子, 搜索, 下载]
+tags: [P2P, 索引, 检索]
 status: active
-summary: The Pirate Bay 是老牌 torrent/magnet 索引站，知名度高，也长期伴随版权争议。
+summary: The Pirate Bay 是老牌 P2P 文件索引站，提供分布式文件目录检索入口。
 ---
 
 ![The Pirate Bay](https://www.google.com/s2/favicons?domain=thepiratebay.org&sz=128)
 
 ## 简介
 
-The Pirate Bay 是一个老牌 torrent/magnet 索引站，创立于 2003 年。它提供面向影音、游戏、软件等类别的 magnet 链接搜索和索引服务，是 BitTorrent 生态中知名度很高、争议也很大的站点。
+The Pirate Bay 是一个老牌 P2P 文件索引站，创立于 2003 年。它提供面向多类文件目录的搜索和索引服务，是相关生态中知名度很高的站点。
 
 ## 特点
 
-- 支持按关键词、分类和资源类型浏览 magnet 链接。
+- 支持按关键词、分类和资源类型浏览站点内条目。
 - 历史较久，镜像和替代入口较多。
 - 更偏向索引和搜索入口，不直接保证资源质量。
 
 ## 注意事项
 
-该站长期涉及版权争议，也可能存在仿冒站、恶意广告或风险文件。使用时应特别注意安全验证和法律合规。
+该站可能存在仿冒站、恶意广告、风险文件以及授权来源不清等情况。使用时应特别注意安全验证和合规要求。
 
 ## 资料来源
 
