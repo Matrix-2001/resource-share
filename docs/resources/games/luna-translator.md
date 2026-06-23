@@ -4,7 +4,7 @@ url: https://github.com/HIllya51/LunaTranslator
 category: games
 tags: [游戏工具, 翻译, 视觉小说]
 status: active
-summary: LunaTranslator 是视觉小说翻译器，适合记录游戏文本提取、OCR 和多翻译接口相关工具入口。
+summary: LunaTranslator 面向视觉小说和游戏文本翻译，支持文本提取、OCR 识别和多翻译接口接入。
 ---
 
 ![LunaTranslator](https://www.google.com/s2/favicons?domain=github.com&sz=128)

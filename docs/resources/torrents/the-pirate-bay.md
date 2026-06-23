@@ -4,7 +4,7 @@ url: https://thepiratebay.org/
 category: torrents
 tags: [P2P, 索引, 检索]
 status: active
-summary: The Pirate Bay 是老牌 P2P 文件索引站，提供分布式文件目录检索入口。
+summary: The Pirate Bay 是历史较久的 P2P 文件目录站，镜像和替代入口较多，可通过关键词浏览索引条目。
 ---
 
 ![The Pirate Bay](https://www.google.com/s2/favicons?domain=thepiratebay.org&sz=128)
@@ -17,7 +17,7 @@ The Pirate Bay 是一个老牌 P2P 文件索引站，创立于 2003 年。它提
 
 - 支持按关键词、分类和资源类型浏览站点内条目。
 - 历史较久，镜像和替代入口较多。
-- 更偏向索引和搜索入口，不直接保证资源质量。
+- 站点以索引和搜索入口为主，不直接保证资源质量。
 
 ## 注意事项
 

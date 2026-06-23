@@ -271,3 +271,27 @@ test('项目说明文案避免使用高风险描述词', async () => {
     }
   }
 })
+
+test('资源摘要避免使用模板化维护描述', async () => {
+  const files = [
+    'docs/resources/index.md',
+    'docs/resources/❤大家想看的东西❤/index.md',
+    'docs/resources/❤大家想看的东西❤/18comic.md',
+    'docs/resources/❤大家想看的东西❤/51cg1.md',
+    'docs/resources/❤大家想看的东西❤/hanime1.md',
+    'docs/resources/❤大家想看的东西❤/missav.md'
+  ]
+  const templatePhrases = [
+    '适合记录站点访问地址、可用性和基础说明',
+    '适合记录',
+    '适合按',
+    '偏向'
+  ]
+
+  for (const file of files) {
+    const content = await readFile(join(process.cwd(), file), 'utf8')
+    for (const phrase of templatePhrases) {
+      assert.equal(content.includes(phrase), false, `${file} 不应使用模板化维护描述：${phrase}`)
+    }
+  }
+})

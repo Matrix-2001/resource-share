@@ -4,7 +4,7 @@ url: https://github.com/privateersclub/wiki
 category: games
 tags: [游戏, 搜索]
 status: active
-summary: PrivateersClub Wiki 是托管在 GitHub 上的游戏相关资料 Wiki，适合查阅游戏资料索引和工具指南。
+summary: PrivateersClub Wiki 汇总游戏相关资料、平台说明和工具指南，可按主题查阅社区整理的知识条目。
 ---
 
 ![PrivateersClub Wiki](https://www.google.com/s2/favicons?domain=github.com&sz=128)

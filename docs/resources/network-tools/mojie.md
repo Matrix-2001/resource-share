@@ -4,14 +4,14 @@ url: https://mojie.me/
 category: network-tools
 tags: [网络工具, 代理服务]
 status: active
-summary: Mojie 是网络访问工具相关站点，适合记录代理服务入口和使用说明。
+summary: Mojie 提供网络访问服务入口，页面包含套餐、节点和客户端使用说明，可作为服务信息索引。
 ---
 
 ![Mojie](https://www.google.com/s2/favicons?domain=mojie.me&sz=128)
 
 ## 简介
 
-Mojie 是一个网络访问工具相关站点，适合记录代理服务入口、订阅服务说明和相关使用提醒。
+Mojie 是一个网络访问工具相关站点，页面包含服务入口、订阅说明和相关使用提醒。
 
 ## 特点
 

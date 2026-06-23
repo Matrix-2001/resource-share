@@ -4,7 +4,7 @@ url: https://github.com/gorhill/uBlock
 category: network-tools
 tags: [浏览器扩展, 内容拦截, 隐私]
 status: active
-summary: uBlock Origin 是面向 Chromium 和 Firefox 的开源内容拦截器，适合记录广告、追踪器和恶意站点拦截工具入口。
+summary: uBlock Origin 是面向 Chromium 和 Firefox 的开源内容拦截器，可用于拦截广告、追踪器和风险站点请求。
 ---
 
 ![uBlock Origin](https://www.google.com/s2/favicons?domain=github.com&sz=128)
